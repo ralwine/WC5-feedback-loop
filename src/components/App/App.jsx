@@ -1,9 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
-
+  
+  const dispatch = useDispatch()
+  
   return (
     <div className='App'>
       <header className='App-header'>
