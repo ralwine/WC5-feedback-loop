@@ -1,1 +1,25 @@
 START WITH A ROUGH OUTLINE
+
+Total number of views/screens/routes needed for base: 6.
+- 'Sticky' header (already provided) through first 4.
+    - 1) "How are you feeling today?" (on numerical scale)
+            "Feeling" ___input___ (must be number) 
+            | NEXT | Button (fields cannot be empty to advance to next screen)
+    - 2) "How well are you understanding the content?" (on numerical scale)
+            "Understanding" ___input___ (must be number) 
+            | NEXT | Button (fields cannot be empty to advance to next screen)
+    - 3) "How well are you being supported?" (on numerical scale)
+            "Support" ___input___ (must be number) 
+            | NEXT | Button (fields cannot be empty to advance to next screen)
+    - 4) "Any comments you want to leave?" (string.... might need char limit?)
+            "Comments" ___input___ (string)
+            | NEXT | Button (fields cannot be empty to advance to next screen)
+
+    - Review Component/screen/route (5)
+        - summation of results from previous four pages
+            | SUBMIT | Button (only mechanism on this screen, will submit data to DB and advance to next screen...)
+    
+    - Closing Screen/ route (6)
+        - Some indication to user that feedback was succesfully accepted.
+        - Some sort of "Thank You" for doing so
+        - Invitation to "Leave New Feedback .... | button | that returns to the first screen and begins the process anew.
