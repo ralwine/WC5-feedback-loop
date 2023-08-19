@@ -3,77 +3,37 @@ import axios from 'axios';
 import './App.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { HashRouter as Router, Route } from 'react-router-dom/cjs/react-router-dom.min';
+import { FeelingItem } from '../FeelingItem/FeelingItem'
+import { UnderstandingItem } from '../UnderstandingItem/UnderstandingItem'
+import { SupportItem } from '../SupportItem/SupportItem';
+import { CommentsString } from '../CommentsString/CommentsString';
+
 function App() {
 
-  const emotionsCart = useSelector(store => store.emotions)
+  const rateEmotions = useSelector(store => store.emotions)
   const dispatch = useDispatch()
+
+  // rate emotions to dispatch to emotionsCart in index.js
 
 
 
   return (
     <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
+
 
       <Router>
         <Route path='/' exact>
-          <h1>
-            How are you feeling today?
-          </h1>
-          <h2>
-            Feeling?
-          </h2>
-          <input type="number" placeholder='Scale of 1-10' />
-          <div className='fancyDiv'>
-          <Link to='/understanding'>
-            <button className="fancyBtn">NEXT</button>
-          </Link>
-          </div>
+          <FeelingItem />
         </Route>
         <Route path='/understanding' exact>
-          <h1>
-            How well are you understanding the content?
-          </h1>
-          <h2>
-            Understanding?
-          </h2>
-          <input type="number" placeholder='Scale of 1-10' />
-          <div className='fancyDiv'>
-          <Link to='/support'>
-            <button className="fancyBtn">NEXT</button>
-          </Link>
-          </div>
+          <UnderstandingItem />
         </Route>
         <Route path='/support' exact>
-          <h1>
-            How well are you being supported?
-          </h1>
-          <h2>
-            Support?
-          </h2>
-          <input type="number" placeholder='Scale of 1-10' />
-          <div className='fancyDiv'>
-          <Link to='/comments'>
-            <button className="fancyBtn">NEXT</button>
-          </Link>
-          </div>
+          <SupportItem />
         </Route>
         <Route path='/comments' exact>
-          <h1>
-            Any comments you want to leave?
-          </h1>
-          <h2>
-            Comments
-          </h2>
-          <input type="text" placeholder='Tell us what is on your mind!' />
-          <div className='fancyDiv'>
-          {/* <Link to='/review'> */}
-          <button className="fancyBtn">NEXT</button>
-          {/* </Link> */}
-          </div>
+          <CommentsString />
         </Route>
         <Route></Route>
         <Route></Route>
@@ -84,3 +44,7 @@ function App() {
 }
 
 export default App;
+
+
+
+

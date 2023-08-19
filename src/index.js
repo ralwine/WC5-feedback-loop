@@ -7,13 +7,16 @@ import { Provider } from 'react-redux'
 import logger from 'redux-logger'
 
 // reducer that acts a 'cart' to collect our data.
-const emotions=(state = [], action) =>{
+const emotionsCart=(state = [], action) =>{
+  if (action.type === 'RATE_EMOTION'){
+    return [...state, action.payload]
+  }
   return state
 }
 
 const storeInstance = createStore(
     combineReducers({
-        emotions
+        emotionsCart
     }),
 applyMiddleware(
   logger
