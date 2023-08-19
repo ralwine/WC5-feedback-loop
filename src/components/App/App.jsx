@@ -27,9 +27,11 @@ function App() {
             Feeling?
           </h2>
           <input type="number" placeholder='Scale of 1-10' />
+          <div className='fancyDiv'>
           <Link to='/understanding'>
             <button className="fancyBtn">NEXT</button>
           </Link>
+          </div>
         </Route>
         <Route path='/understanding' exact>
           <h1>
@@ -39,9 +41,11 @@ function App() {
             Understanding?
           </h2>
           <input type="number" placeholder='Scale of 1-10' />
+          <div className='fancyDiv'>
           <Link to='/support'>
             <button className="fancyBtn">NEXT</button>
           </Link>
+          </div>
         </Route>
         <Route path='/support' exact>
           <h1>
@@ -51,9 +55,11 @@ function App() {
             Support?
           </h2>
           <input type="number" placeholder='Scale of 1-10' />
+          <div className='fancyDiv'>
           <Link to='/comments'>
             <button className="fancyBtn">NEXT</button>
           </Link>
+          </div>
         </Route>
         <Route path='/comments' exact>
           <h1>
@@ -62,10 +68,12 @@ function App() {
           <h2>
             Comments
           </h2>
-          <input type="number" placeholder='Scale of 1-10' />
+          <input type="text" placeholder='Tell us what is on your mind!' />
+          <div className='fancyDiv'>
           {/* <Link to='/review'> */}
           <button className="fancyBtn">NEXT</button>
           {/* </Link> */}
+          </div>
         </Route>
         <Route></Route>
         <Route></Route>

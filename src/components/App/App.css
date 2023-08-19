@@ -21,3 +21,17 @@
 h4 {
   font-style: italic;
 }
+
+.fancyDiv{
+  text-align: right;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.fancyBtn{
+  background-color: #033076;
+  color: white;
+  font-size: large;
+  font-style: italic;
+  margin-right: right;
+}

@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import logger from 'redux-logger'
 
 // reducer that acts a 'cart' to collect our data.
-const emotions =(state = [], action) =>{
+const emotions=(state = [], action) =>{
   return state
 }
 

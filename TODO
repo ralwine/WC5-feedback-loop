@@ -30,7 +30,7 @@ TASKLIST:
 Double-check setup 
         - This assignment was NOT forked {x}
         - Make sure database is setup and properly hooked in {}
-        - Make sure correct dependencies are installed and properly hooked in {}
+        - Make sure correct dependencies are installed and properly hooked in {x}
 
 
 
@@ -41,14 +41,14 @@ Do NOT start POST route until first four rotues are functional and rendering.
 Figure out if a reducer is needed for each page {}
 
 First screen - /FeelingHome
-        - Tags for "How are you feeling today?"(<h1>) and "Feeling?" {}
-        - Input... type=number (limit 5 or 10?) {}
+        - Tags for "How are you feeling today?"(<h1>) and "Feeling?" {x}
+        - Input... type=number (limit 5 or 10?) {x}
         - | NEXT | Button (large!)... <link> to /Understanding {}
         - Should also send data to store {}
 
 Second screen - /Understanding
-        - Tags for "How well are you understanding the content?"(<h1>) and "Understanding?" {}
-        - Input... type=number (limit 5 or 10?) {}
+        - Tags for "How well are you understanding the content?"(<h1>) and "Understanding?" {x}
+        - Input... type=number (limit 5 or 10?) {x}
         - | NEXT | Button (large!)... <link> to /Support {}
         - Should also send data to store {}
 
