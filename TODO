@@ -36,33 +36,33 @@ Double-check setup
 
 Start making spots for 6 routes in App.jsx. Work here before refactor.
 Do NOT start POST route until first four rotues are functional and rendering.
-        - FeelingHome, Understanding, Support, Comments, Review, Thanks {}
+        - FeelingHome, Understanding, Support, Comments, Review, Thanks {x}
 
 Figure out if a reducer is needed for each page {}
 
 First screen - /FeelingHome
         - Tags for "How are you feeling today?"(<h1>) and "Feeling?" {x}
-        - Input... type=number (limit 5 or 10?) {x}
-        - | NEXT | Button (large!)... <link> to /Understanding {}
-        - Should also send data to store {}
+        - Input... type=number (limit 5 or 10?) {}
+        - | NEXT | Button (large!)... <link> to /Understanding {x}
+        - Should also send data to store {x}
 
 Second screen - /Understanding
         - Tags for "How well are you understanding the content?"(<h1>) and "Understanding?" {x}
-        - Input... type=number (limit 5 or 10?) {x}
-        - | NEXT | Button (large!)... <link> to /Support {}
-        - Should also send data to store {}
+        - Input... type=number (limit 5 or 10?) {}
+        - | NEXT | Button (large!)... <link> to /Support {x}
+        - Should also send data to store {x}
 
 Third screen - /Support
-        - Tags for "How well are you being supported?"(<h1>) and "Understanding?" {}
+        - Tags for "How well are you being supported?"(<h1>) and "Understanding?" {x}
         - Input... type=number (limit 5 or 10?) {}
-        - | NEXT | Button (large!)... <link> to /Comments {}
-        - Should also send data to store {}
+        - | NEXT | Button (large!)... <link> to /Comments {x}
+        - Should also send data to store {x}
 
 Fourth screen - /Comments
-        - Tags for "Any comments you want to leave?"(<h1>) and "Understanding?" {}
+        - Tags for "Any comments you want to leave?"(<h1>) and "Understanding?" {x}
         - Input... type=number (limit 5 or 10?) {}
-        - | NEXT | Button (large!)... <link> to /Review {}
-        - Should also send data to store {}
+        - | NEXT | Button (large!)... <link> to /Review {x}
+        - Should also send data to store {x}
 
 Fifth screen - /Review
         - Tags for:

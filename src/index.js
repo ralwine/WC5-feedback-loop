@@ -14,9 +14,15 @@ const emotionsCart=(state = [], action) =>{
   return state
 }
 
+// reducer for the render of the above array items
+const emotionsInfo =(state = [], action) =>{
+  return state
+}
+
 const storeInstance = createStore(
     combineReducers({
-        emotionsCart
+        emotionsCart,
+        emotionsInfo
     }),
 applyMiddleware(
   logger

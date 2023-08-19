@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { HashRouter as Router, Route } from 'react-router-dom/cjs/react-router-dom.min';
+import { HashRouter as Router, Route, Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { FeelingItem } from '../FeelingItem/FeelingItem'
 import { UnderstandingItem } from '../UnderstandingItem/UnderstandingItem'
 import { SupportItem } from '../SupportItem/SupportItem';
@@ -35,8 +35,30 @@ function App() {
         <Route path='/comments' exact>
           <CommentsString />
         </Route>
-        <Route></Route>
-        <Route></Route>
+        <Route path='/review' exact>
+          <header>
+            <h1>
+              Review Your Feedback
+            </h1>
+          </header>
+          <main>
+            <h3>Feelings: </h3>
+            <h3>Understanding: </h3>
+            <h3>Support: </h3>
+            <h3>Comments: </h3>
+          </main>
+          <footer>
+            <Link to='/thanks'>
+              <button className='submit'>SUBMIT</button>
+            </Link>
+          </footer>
+        </Route>
+        <Route path='/thanks' exact>
+          <div className='lastScreen'>
+            <h1>THANK YOU FOR YOUR PARTICPATION!</h1>
+            <button className='feedback'>Leave New Feedback</button>
+          </div>
+        </Route>
       </Router>
 
     </div>
