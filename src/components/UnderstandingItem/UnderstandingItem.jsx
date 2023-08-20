@@ -38,7 +38,8 @@ export function UnderstandingItem() {
       onChange={event => setUnderstandingRating(event.target.value)} />
     <div className='fancyDiv'>
       <Link to='/support'>
-        <button className="nextBtn" onClick={handleUnderstandingRating}>NEXT</button>
+        <button className="nextBtn" onClick={handleUnderstandingRating}
+          disabled={!understandingRating}>NEXT</button>
       </Link>
     </div>
   </>)

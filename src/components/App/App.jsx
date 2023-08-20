@@ -19,7 +19,7 @@ function App() {
   const emotionsList = useSelector(store => store.emotionsCart)
   console.log("in emoList", emotionsList)
   const emoInfo = useSelector(store => store.emotionsInfo)
-
+  console.log("emoInfo", emoInfo)
 
   return (
     <div className='App'>
@@ -65,7 +65,9 @@ function App() {
         <Route path='/thanks' exact>
           <div className='lastScreen'>
             <h1>THANK YOU FOR YOUR PARTICPATION!</h1>
+            <Link to='/' exact>
             <button className='feedback'>Leave New Feedback</button>
+            </Link>
           </div>
         </Route>
       </Router>

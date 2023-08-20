@@ -38,7 +38,7 @@ Start making spots for 6 routes in App.jsx. Work here before refactor.
 Do NOT start POST route until first four rotues are functional and rendering.
         - FeelingHome, Understanding, Support, Comments, Review, Thanks {x}
 
-Figure out if a reducer is needed for each page {}
+Figure out if a reducer is needed for each page {x}
 
 First screen - /FeelingHome
         - Tags for "How are you feeling today?"(<h1>) and "Feeling?" {x}
@@ -66,20 +66,20 @@ Fourth screen - /Comments
 
 Fifth screen - /Review
         - Tags for:
-                - "Review Your Feedback" <h1> {}
+                - "Review Your Feedback" <h1> {x}
                 <h2>s?
                 - "Feelings: " {}
                 - "Understading: " {}
                 - "Support: " {}
                 - "Comments: " {}
-        - | SUBMIT | button {}
+        - | SUBMIT | button {x}
         - Function for handleSubmit/ button 
                 - Make POST route (client AND server!)... maybe leave in App.jsx {}
                 - Test in POSTMAN and check DB {}
-                - <link> to /Thanks {}
+                - <link> to /Thanks {x}
 Sixth screen - /Thanks
-        - Feedback Header w/ <h1> {}
-        - Tag for "Thanks" {}
+        - Feedback Header w/ <h1> {x}
+        - Tag for "Thanks" {x}
         - | Leave New Feedback | button... <link> to /FeelingHome {}
 
                 

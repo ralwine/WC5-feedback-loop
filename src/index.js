@@ -16,6 +16,10 @@ const emotionsCart=(state = [], action) =>{
 
 // reducer for the render of the above array items
 const emotionsInfo =(state = [], action) =>{
+  if (action.type ==='EMOTION_ARRAY'){
+    return [...state, action.payload]
+    console.log("hey",action.payload)
+  }
   return state
 }
 
@@ -24,9 +28,9 @@ const storeInstance = createStore(
         emotionsCart,
         emotionsInfo
     }),
-applyMiddleware(
-  logger
-)
+// applyMiddleware(
+//   logger
+// )
 )
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

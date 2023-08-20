@@ -7,27 +7,41 @@ export function CommentsString() {
 
   const dispatch = useDispatch()
   const [comments, setComments] = useState('')
+  const [feedbackArray, setFeedbackArray] = useState('')
+  //const feedbackCart = useSelector(store =>store.emotionsCart)
+  const feedbackInfo = useSelector(store => store.emotionsInfo)
 
   // HandleSubmit here.. going to need a condtional restrict rating from num1-10
   const handleComments = () => {
     console.log("inside handleComm")
     let commentsData = {
       comments: comments
-      //not sure about this method above .... but it works!
+      //not sure about this method above.... but it works!
     }
     console.log("Comments rating", commentsData)
     dispatch({
       type: 'RATE_EMOTION',
       payload: commentsData
     })
-    
+
   }
 
-  // Use same button to render to page!
+  // Use same button to render to the next screen!
   const handleFeedback = () => {
     console.log("inside handleFb")
-    //let
+    let feedbackArray = {
+      feedbackInfo
+
+    }
+    //type: 'EMOTION_ARRAY'
+    console.log("rendering feedback array")
+    dispatch({
+      type: 'EMOTION_ARRAY',
+      payload: feedbackArray
+    })
   }
+
+  console.log('fb array', feedbackArray)
 
 
 
@@ -43,10 +57,11 @@ export function CommentsString() {
       Comments
     </h2>
     <input type="text" id="commentsInput" placeholder='Tell us what is on your mind!' value={comments}
-      onChange={event => setComments(event.target.value)} />
+      onChange={event => { setComments(event.target.value); setFeedbackArray(event.target.value) }} />
     <div className='fancyDiv'>
       <Link to='/review'>
-        <button className="nextBtn" onClick={()=>{handleComments(); handleFeedback();}} >NEXT</button>
+        <button className="nextBtn" onClick={() => { handleComments(); handleFeedback(); }}
+          disabled={!comments}>NEXT</button>
       </Link>
     </div >
   </>)

@@ -37,7 +37,8 @@ export function SupportItem() {
       onChange={event => setSupportRating(event.target.value)} />
     <div className='fancyDiv'>
       <Link to='/comments'>
-        <button className="nextBtn" onClick={handleSupportRating}>NEXT</button>
+        <button className="nextBtn" onClick={handleSupportRating}
+          disabled={!supportRating}>NEXT</button>
       </Link>
     </div>
   </>)
