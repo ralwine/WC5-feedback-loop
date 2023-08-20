@@ -20,7 +20,16 @@ export function CommentsString() {
       type: 'RATE_EMOTION',
       payload: commentsData
     })
+    
   }
+
+  // Use same button to render to page!
+  const handleFeedback = () => {
+    console.log("inside handleFb")
+    //let
+  }
+
+
 
   return (<>
     <header className='App-header'>
@@ -37,8 +46,8 @@ export function CommentsString() {
       onChange={event => setComments(event.target.value)} />
     <div className='fancyDiv'>
       <Link to='/review'>
-        <button className="nextBtn" onClick={handleComments}>NEXT</button>
+        <button className="nextBtn" onClick={()=>{handleComments(); handleFeedback();}} >NEXT</button>
       </Link>
-    </div>
+    </div >
   </>)
 }

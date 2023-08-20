@@ -15,7 +15,10 @@ function App() {
   const dispatch = useDispatch()
 
   // rate emotions to dispatch to emotionsCart in index.js
-
+  //
+  const emotionsList = useSelector(store => store.emotionsCart)
+  console.log("in emoList", emotionsList)
+  const emoInfo = useSelector(store => store.emotionsInfo)
 
 
   return (
@@ -42,10 +45,16 @@ function App() {
             </h1>
           </header>
           <main>
-            <h3>Feelings: </h3>
-            <h3>Understanding: </h3>
-            <h3>Support: </h3>
-            <h3>Comments: </h3>
+            <div>
+              {emoInfo.map((emo, index) =>
+                <div key={index}>
+                  <h3>Feelings: {emo.feelingRating}</h3>
+                  <h3>Understanding: {emo.understandingRating} </h3>
+                  <h3>Support: {emo.supportRating}</h3>
+                  <h3>Comments: {emo.comments}</h3>
+                </div>
+              )}
+            </div>
           </main>
           <footer>
             <Link to='/thanks'>
