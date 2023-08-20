@@ -52,20 +52,19 @@ function App() {
           </header>
           <main>
             <div>
-              <ul>
-                {emotionsList.map((item, index) => (
-                  <li>
-                    {item.feeling_rating}
 
+              {emotionsList.map((item, index) =>
+                <div className='feedbackInfo'>
+                  <div key={index}>
+                    <h3>{item.feeling_rating}</h3>
+                    <h3>{item.understanding_rating}</h3>
+                    <h3>{item.support_rating}</h3>
+                    <h3>{item.comments}</h3>
+                  </div>
+                  </div>
+              )}
 
-                    {item.understanding_rating}
-                    {item.support_rating}
-
-                    {item.comments}
-                  </li>
-                ))}
-              </ul>
-            </div>
+                </div>
 
           </main>
           <footer>
