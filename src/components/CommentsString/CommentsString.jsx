@@ -8,8 +8,8 @@ export function CommentsString() {
   const dispatch = useDispatch()
   const [comments, setComments] = useState('')
   const [feedbackArray, setFeedbackArray] = useState('')
-  //const feedbackCart = useSelector(store =>store.emotionsCart)
-  const feedbackInfo = useSelector(store => store.emotionsInfo)
+  const feedbackCart = useSelector(store =>store.emotionsCart)
+  //const feedbackInfo = useSelector(store => store.emotionsInfo)
 
   // HandleSubmit here.. going to need a condtional restrict rating from num1-10
   const handleComments = () => {
@@ -30,13 +30,13 @@ export function CommentsString() {
   const handleFeedback = () => {
     console.log("inside handleFb")
     let feedbackArray = {
-      feedbackInfo
+      feedbackCart
 
     }
     //type: 'EMOTION_ARRAY'
     console.log("rendering feedback array")
     dispatch({
-      type: 'EMOTION_ARRAY',
+      type: 'EMOTIONS_ARRAY',
       payload: feedbackArray
     })
   }

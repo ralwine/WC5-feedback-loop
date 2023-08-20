@@ -11,6 +11,9 @@ import { CommentsString } from '../CommentsString/CommentsString';
 
 function App() {
 
+
+
+
   const rateEmotions = useSelector(store => store.emotions)
   const dispatch = useDispatch()
 
@@ -20,6 +23,9 @@ function App() {
   console.log("in emoList", emotionsList)
   const emoInfo = useSelector(store => store.emotionsInfo)
   console.log("emoInfo", emoInfo)
+
+  console.log("OY there!", emotionsList.map((item, index) => item.feeling_rating))
+
 
   return (
     <div className='App'>
@@ -46,15 +52,21 @@ function App() {
           </header>
           <main>
             <div>
-              {emoInfo.map((emo, index) =>
-                <div key={index}>
-                  <h3>Feelings: {emo.feelingRating}</h3>
-                  <h3>Understanding: {emo.understandingRating} </h3>
-                  <h3>Support: {emo.supportRating}</h3>
-                  <h3>Comments: {emo.comments}</h3>
-                </div>
-              )}
+              <ul>
+                {emotionsList.map((item, index) => (
+                  <li>
+                    {item.feeling_rating}
+
+
+                    {item.understanding_rating}
+                    {item.support_rating}
+
+                    {item.comments}
+                  </li>
+                ))}
+              </ul>
             </div>
+
           </main>
           <footer>
             <Link to='/thanks'>
@@ -66,7 +78,7 @@ function App() {
           <div className='lastScreen'>
             <h1>THANK YOU FOR YOUR PARTICPATION!</h1>
             <Link to='/' exact>
-            <button className='feedback'>Leave New Feedback</button>
+              <button className='feedback'>Leave New Feedback</button>
             </Link>
           </div>
         </Route>

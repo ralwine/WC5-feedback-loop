@@ -60,18 +60,19 @@ Third screen - /Support
 
 Fourth screen - /Comments
         - Tags for "Any comments you want to leave?"(<h1>) and "Understanding?" {x}
-        - Input... type=number (limit 5 or 10?) {}
+        - Input... type=text (not sure about limiting this) {x}
         - | NEXT | Button (large!)... <link> to /Review {x}
         - Should also send data to store {x}
 
 Fifth screen - /Review
+        - Render input data here {}
         - Tags for:
                 - "Review Your Feedback" <h1> {x}
                 <h2>s?
-                - "Feelings: " {}
-                - "Understading: " {}
-                - "Support: " {}
-                - "Comments: " {}
+                - "Feelings: " {x}
+                - "Understading: " {x}
+                - "Support: " {x}
+                - "Comments: " {x}
         - | SUBMIT | button {x}
         - Function for handleSubmit/ button 
                 - Make POST route (client AND server!)... maybe leave in App.jsx {}

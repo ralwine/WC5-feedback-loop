@@ -8,10 +8,6 @@ export function FeelingItem() {
   const dispatch = useDispatch()
   const [feelingRating, setFeelingRating] = useState('')
 
-
-
-
-
   // HandleSubmit here.. going to need a condtional restrict rating from num1-10
   const handleFeelingRating = () => {
     console.log("inside handleFeel")
@@ -20,6 +16,7 @@ export function FeelingItem() {
       feeling_rating: feelingRating
       //not sure about this method above .... but it works!
     }
+
     console.log("Feeling? rating", feelingData)
     dispatch({
       type: 'RATE_EMOTION',
@@ -42,7 +39,7 @@ export function FeelingItem() {
     </h2>
     {/* input id should be different for each? */}
     <input type="number" id="inputFeeling" placeholder='Scale of 1-10' value={feelingRating}
-      onChange={event => setFeelingRating(event.target.value)} />
+      min='1' max='10' onChange={event => setFeelingRating(event.target.value)} />
     <div className='fancyDiv'>
       <Link to='/understanding'>
         <button className="nextBtn" onClick={handleFeelingRating}

@@ -31,10 +31,10 @@ export function SupportItem() {
       How well are you being supported?
     </h1>
     <h2>
-      Support?
+      Please rate on a scale of 1 to 10 using arrows
     </h2>
-    <input type="number" id="inputSupport" placeholder='Scale of 1-10' value={supportRating}
-      onChange={event => setSupportRating(event.target.value)} />
+    <input type="number" id="inputSupport" placeholder='0' value={supportRating}
+      min='1' max='10' onChange={event => setSupportRating(event.target.value)} />
     <div className='fancyDiv'>
       <Link to='/comments'>
         <button className="nextBtn" onClick={handleSupportRating}

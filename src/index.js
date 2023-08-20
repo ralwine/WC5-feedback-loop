@@ -18,11 +18,11 @@ const emotionsCart=(state = [], action) =>{
 const emotionsInfo =(state = [], action) =>{
   if (action.type ==='EMOTION_ARRAY'){
     return [...state, action.payload]
-    console.log("hey",action.payload)
-  }
+    
+  }console.log("hey",action.payload)
+
   return state
 }
-
 const storeInstance = createStore(
     combineReducers({
         emotionsCart,
