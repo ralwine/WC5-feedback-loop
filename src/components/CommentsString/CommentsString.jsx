@@ -26,6 +26,7 @@ export function CommentsString() {
 
   }
 
+  // This part might not be needed now... wait to comment out
   // Use same button to render to the next screen!
   const handleFeedback = () => {
     console.log("inside handleFb")

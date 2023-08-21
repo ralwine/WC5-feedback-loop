@@ -8,15 +8,12 @@ import { FeelingItem } from '../FeelingItem/FeelingItem'
 import { UnderstandingItem } from '../UnderstandingItem/UnderstandingItem'
 import { SupportItem } from '../SupportItem/SupportItem';
 import { CommentsString } from '../CommentsString/CommentsString';
+import { LastScreen } from '../LastScreen/LastScreen';
+
 
 function App() {
 
-
-
-
-  const rateEmotions = useSelector(store => store.emotions)
-  const dispatch = useDispatch()
-
+  
   // rate emotions to dispatch to emotionsCart in index.js
   //
   const emotionsList = useSelector(store => store.emotionsCart)
@@ -26,6 +23,9 @@ function App() {
 
   console.log("OY there!", emotionsList.map((item, index) => item.feeling_rating))
 
+  
+
+  
 
   return (
     <div className='App'>
@@ -74,12 +74,7 @@ function App() {
           </footer>
         </Route>
         <Route path='/thanks' exact>
-          <div className='lastScreen'>
-            <h1>THANK YOU FOR YOUR PARTICPATION!</h1>
-            <Link to='/' exact>
-              <button className='feedback'>Leave New Feedback</button>
-            </Link>
-          </div>
+          <LastScreen />
         </Route>
       </Router>
 
@@ -88,6 +83,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

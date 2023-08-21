@@ -7,35 +7,39 @@ import { Provider } from 'react-redux'
 import logger from 'redux-logger'
 
 // reducer that acts a 'cart' to collect our data.
-const emotionsCart=(state = [], action) =>{
-  if (action.type === 'RATE_EMOTION'){
+const emotionsCart = (state = [], action) => {
+  if (action.type === 'RATE_EMOTION') {
     return [...state, action.payload]
   }
   return state
 }
 
 // reducer for the render of the above array items
-const emotionsInfo =(state = [], action) =>{
-  if (action.type ==='EMOTION_ARRAY'){
+const emotionsInfo = (state = [], action) => {
+  if (action.type === 'EMOTION_ARRAY') {
     return [...state, action.payload]
-    
-  }console.log("hey",action.payload)
+
+  } console.log("hey", action.payload)
 
   return state
 }
+
+
+
 const storeInstance = createStore(
-    combineReducers({
-        emotionsCart,
-        emotionsInfo
-    }),
-// applyMiddleware(
-//   logger
-// )
+  combineReducers({
+    emotionsCart,
+    emotionsInfo,
+    
+  }),
+  // applyMiddleware(
+  //   logger
+  // )
 )
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Provider store={storeInstance}>
-            <App />
-        </Provider>
+  <Provider store={storeInstance}>
+    <App />
+  </Provider>
 );

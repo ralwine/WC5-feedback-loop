@@ -35,7 +35,7 @@ export function UnderstandingItem() {
       Please rate on a scale of 1 to 10 using arrows.
     </h2>
     <input type="number" id="inputUnderstanding" placeholder='0' value={understandingRating}
-      onChange={event => setUnderstandingRating(event.target.value)} />
+      min='1' max='10' onChange={event => setUnderstandingRating(event.target.value)} />
     <div className='fancyDiv'>
       <Link to='/support'>
         <button className="nextBtn" onClick={handleUnderstandingRating}
