@@ -12,3 +12,7 @@ My first task in terms of writing code was to establish the routes that would al
 POST route was successfully tested on server side once the DB was hooked up, but it is currently not functioning on the client side. I suspect this may be related to the way the render mentioned above is being handled. Was able to find a solution for the app reset/refresh very close to the deadline.
 
 Will revisit this project to get the POST route working and clean up some of the code. Also may add some hover effects to the buttons to alert the user that the screen won't advance without any data input.
+
+<img src ="beforeRefactor.png" alt="Before_Refactor" width=200 height= />
+
+<img src ="afterRefactor.png" alt="After_Refactor" width=200 height= />

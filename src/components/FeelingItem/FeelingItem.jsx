@@ -22,6 +22,7 @@ export function FeelingItem() {
       type: 'RATE_EMOTION',
       payload: feelingData
     })
+    
 
 
   }
