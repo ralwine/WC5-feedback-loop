@@ -7,7 +7,7 @@ import {useHistory} from 'react-router-dom/cjs/react-router-dom.min';
 
 export function LastScreen() {
 
-  // had to rehash this particular feature, I seemed to forget how useHistory works the first time around
+  // had to rehash this particular method, I seemed to forget how useHistory works the first time around
   const history = useHistory()
   // reset data and return to first screen -> /feelings
   function resetFeedback(){

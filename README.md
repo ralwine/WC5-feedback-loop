@@ -11,4 +11,4 @@ My first task in terms of writing code was to establish the routes that would al
 
 POST route was successfully tested on server side once the DB was hooked up, but it is currently not functioning on the client side. I suspect this may be related to the way the render mentioned above is being handled. Was able to find a solution for the app reset/refresh very close to the deadline.
 
-Will revisit this project and get the POST route working and clean up some of the code.
+Will revisit this project to get the POST route working and clean up some of the code. Also may add some hover effects to the buttons to alert the user that the screen won't advance without any data input.
