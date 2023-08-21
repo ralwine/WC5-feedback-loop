@@ -42,19 +42,19 @@ Figure out if a reducer is needed for each page {x}
 
 First screen - /FeelingHome
         - Tags for "How are you feeling today?"(<h1>) and "Feeling?" {x}
-        - Input... type=number (limit 5 or 10?) {}
+        - Input... type=number (limit 5 or 10?) {x}
         - | NEXT | Button (large!)... <link> to /Understanding {x}
         - Should also send data to store {x}
 
 Second screen - /Understanding
         - Tags for "How well are you understanding the content?"(<h1>) and "Understanding?" {x}
-        - Input... type=number (limit 5 or 10?) {}
+        - Input... type=number (limit 5 or 10?) {x}
         - | NEXT | Button (large!)... <link> to /Support {x}
         - Should also send data to store {x}
 
 Third screen - /Support
         - Tags for "How well are you being supported?"(<h1>) and "Understanding?" {x}
-        - Input... type=number (limit 5 or 10?) {}
+        - Input... type=number (limit 5 or 10?) {x}
         - | NEXT | Button (large!)... <link> to /Comments {x}
         - Should also send data to store {x}
 
@@ -65,7 +65,7 @@ Fourth screen - /Comments
         - Should also send data to store {x}
 
 Fifth screen - /Review
-        - Render input data here {}
+        - Render input data here {x}
         - Tags for:
                 - "Review Your Feedback" <h1> {x}
                 <h2>s?
@@ -76,12 +76,12 @@ Fifth screen - /Review
         - | SUBMIT | button {x}
         - Function for handleSubmit/ button 
                 - Make POST route (client AND server!)... maybe leave in App.jsx {}
-                - Test in POSTMAN and check DB {}
+                - Test in POSTMAN and check DB {x}
                 - <link> to /Thanks {x}
 Sixth screen - /Thanks
         - Feedback Header w/ <h1> {x}
         - Tag for "Thanks" {x}
-        - | Leave New Feedback | button... <link> to /FeelingHome {}
+        - | Leave New Feedback | button... reset data and return to /FeelingHome {x}
 
                 
 

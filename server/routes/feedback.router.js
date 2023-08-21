@@ -4,16 +4,16 @@ const pool = require('../modules/pool');
 
 //POST route should be the only thing needed
 router.post(`/`, (req, res) => {
-    const feedbackCart = req.body;
+    const emotionsList = req.body;
     const sqlText = `INSERT INTO "feedback" 
         ("feeling", "understanding", "support", "comments")
         VALUES ($1, $2, $3, $4)`;
     pool.query(sqlText, 
         [
-            feedbackCart.feeling, 
-            feedbackCart.understanding, 
-            feedbackCart.support,
-            feedbackCart.comments
+            emotionsList.feeling, 
+            emotionsList.understanding, 
+            emotionsList.support,
+            emotionsList.comments
         ]).then((result)=>{
             res.sendStatus(201);
         }).catch((error) =>{

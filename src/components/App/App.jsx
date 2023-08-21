@@ -13,7 +13,7 @@ import { LastScreen } from '../LastScreen/LastScreen';
 
 function App() {
 
-  
+
   // rate emotions to dispatch to emotionsCart in index.js
   //
   const emotionsList = useSelector(store => store.emotionsCart)
@@ -23,9 +23,18 @@ function App() {
 
   console.log("OY there!", emotionsList.map((item, index) => item.feeling_rating))
 
-  
+  function postFeedback(emotionsList) {
+    console.log("inPF", emotionsList)
+    axios.post('/feedback', emotionsList)
+    .then(response =>{
+      console.log("Respone: ", response.data)
+    }).catch(error =>{
+      console.log("Error in client POST", error)
+    })
+  }
 
-  
+
+
 
   return (
     <div className='App'>
@@ -61,15 +70,15 @@ function App() {
                     <h3>{item.support_rating}</h3>
                     <h3>{item.comments}</h3>
                   </div>
-                  </div>
+                </div>
               )}
 
-                </div>
+            </div>
 
           </main>
           <footer>
             <Link to='/thanks'>
-              <button className='submit'>SUBMIT</button>
+              <button className='submit' onClick={postFeedback}>SUBMIT</button>
             </Link>
           </footer>
         </Route>
