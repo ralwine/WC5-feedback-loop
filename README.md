@@ -1,9 +1,7 @@
-<div align='center>
-
 <h1>FEEDBACK SURVEY LOOP (Weekend Challenge #5)</h1>
-<p>An app to collect survey information for a database</p>
+<h2>An app to collect survey information for a database</h2>
 
-</div>
+
 
 For this project, I constructed a basic feedback survey loop somewhat based on the reflections feature in our student portal. I started by making an outline of how I wanted the project to look and partly map out process as well. 
 
